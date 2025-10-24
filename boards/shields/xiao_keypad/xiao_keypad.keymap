@@ -1,0 +1,23 @@
+/*
+ * Copyright (c) 2024 The ZMK Contributors
+ * SPDX-License-Identifier: MIT
+ */
+
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/bt.h>
+
+/ {
+    keymap {
+        compatible = "zmk,keymap";
+
+        default_layer {
+            bindings = <
+                &kp LC(C)    // Button 0: Ctrl+C (Copy)
+                &kp LC(V)    // Button 1: Ctrl+V (Paste)
+                &kp LC(Z)    // Button 2: Ctrl+Z (Undo)
+                &kp LA(TAB)  // Button 3: Alt+Tab (Switch windows)
+            >;
+        };
+    };
+};
