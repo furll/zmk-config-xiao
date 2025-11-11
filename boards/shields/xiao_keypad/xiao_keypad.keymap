@@ -12,7 +12,7 @@
                 &kp N6  &kp N7  &kp N8  &kp N9  &none
             >;
             
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
+            sensor-bindings = <&inc_dec_kp UP DOWN>;
         };
     };
 };
