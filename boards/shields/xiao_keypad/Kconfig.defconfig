@@ -4,10 +4,3 @@ config ZMK_KEYBOARD_NAME
     default "Xiao Keypad"
 
 endif
-```
-
-### 3. `xiao_keypad.conf`
-```
-# Enable encoder support
-CONFIG_EC11=y
-CONFIG_EC11_TRIGGER_GLOBAL_THREAD=y
