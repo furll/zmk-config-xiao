@@ -10,23 +10,23 @@
         diode-direction = "col2row";
         
         row-gpios
-            = <&gpio0 2  (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>   // Row 0 - D1
-            , <&gpio0 29 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>   // Row 1 - D0
+            = <&xiao_d 0  (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>   // Row 0 - D1
+            , <&xiao_d 1 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>   // Row 1 - D0
             ;
         
         col-gpios
-            = <&gpio0 28 GPIO_ACTIVE_HIGH>  // Col 0 - D3
-            , <&gpio1 13 GPIO_ACTIVE_HIGH>  // Col 1 - D4
-            , <&gpio1 15 GPIO_ACTIVE_HIGH>  // Col 2 - D5
-            , <&gpio0 5  GPIO_ACTIVE_HIGH>  // Col 3 - D6
-            , <&gpio0 30 GPIO_ACTIVE_HIGH>  // Col 4 - D7
+            = <&xiao_d 3 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>  // Col 0 - D3
+            , <&xiao_d 4 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>  // Col 1 - D4
+            , <&xiao_d 5 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>  // Col 2 - D5
+            , <&xiao_d 6  (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>  // Col 3 - D6
+            , <&xiao_d 7 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>  // Col 4 - D7
             ;
     };
 
     encoder: encoder_0 {
         compatible = "alps,ec11";
-        a-gpios = <&gpio0 4  (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;   // D8
-        b-gpios = <&gpio0 31 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;   // D9
+        a-gpios = <&xiao_d 8  (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;   // D8
+        b-gpios = <&xiao_d 9 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;   // D9
         steps = <80>;
         status = "okay";
     };
